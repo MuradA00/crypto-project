@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="En-en">
+@include('partials/head.html')
+
+<body>
+  @include('partials/_tape.html')
+  <main>
+    <section class="leaderboard">
+      <div class="leaderboard-container container">
+        <div class="leaderboard-inner">
+          <ul class="leaderboard-table">
+            <li class="leaderboard-table__item">
+              <div class="leaderboard-user">
+                <span class="leaderboard-user__order">6</span>
+                <div class="leaderboard-user__flex">
+                  <div class="leaderboard-user__icon">
+                    <img src="img/global/userImage.webp" alt="userImage">
+                  </div>
+                  <span class="leaderboard-user__name">Danger.Spell</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  @include('partials/footer.html')
+</body>
+<script src="js/main.js"></script>
+</html>

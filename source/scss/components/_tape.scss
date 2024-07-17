@@ -1,0 +1,79 @@
+.tape {
+  --h: 90px;
+  padding: 24px 0;
+  &-flex {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-gap: 20px;
+  }
+  &-row {
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
+  }
+  &-item {
+    min-height: var(--h);
+    min-width: 212px;
+    border-radius: 20px;
+    flex: 0 0 auto;
+    overflow: hidden;
+    grid-gap: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 1.25rem;
+    background-image: var(--bg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: #282a41;
+    &--blue {
+      --bg: url('../../img/tape/tapeItemBlue.webp')
+    }
+    &--yellow {
+      --bg: url('../../img/tape/tapeItemYellow.webp')
+    }
+    &--green {
+      --bg: url('../../img/tape/tapeItemGreen.webp')
+    }
+    @include hover {
+      .tape-icon {
+        scale: 1.125;
+      }
+    }
+  }
+  &-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: var(--t-sm);
+    font-weight: 500;
+    & > * {
+      line-height: 140%;
+    }
+  }
+  &-icon {
+    width: 56px;
+    aspect-ratio: 1 / 1;
+    transition: scale 300ms ease;
+    flex: 0 0 auto;
+  }
+}
+
+@include tablet {
+  .tape {
+    &-row {
+      grid-gap: 1rem;
+    }
+    &-item {
+      grid-gap: .5rem;
+      min-height: 64px;
+      min-width: 140px;
+      padding: 0 1rem;
+    }
+    &-info {
+      font-size: var(--t-xs);
+    }
+    &-icon {
+      width: 2.5rem;
+    }
+  }
+}

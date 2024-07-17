@@ -1,0 +1,96 @@
+.live {
+  --radius: 12px;
+  --image-h: 160px;
+  background-color: #202236;
+  padding: 54px 0;
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 40px;
+  }
+  &-link {
+    min-height: 48px;
+    @include dfc;
+    text-align: center;
+    background-color: #252940;
+    border-radius: 8px;
+    grid-gap: 14px;
+    border: 1px solid transparent;
+    transition: all 300ms ease;
+    @include hover {
+      background-color: #383440;
+      border-color: rgba(var(--clr-y), 1);
+      box-shadow: 0 0 6px 4px rgba(var(--clr-y), .1);
+    }
+    &__text {
+      font-size: var(--t-sm);
+      text-transform: uppercase;
+      font-weight: 800;
+      font-family: var(--ff-i);
+    }
+    svg {
+      width: 26px;
+      height: 26px;
+      fill: rgba(var(--clr-y), 1);
+    }
+  }
+  &-item {
+    background-color: #22253b;
+    border-radius: var(--radius);
+    padding: 12px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 312px;
+    &::before {
+      @include pseudo;
+      width: 100%;
+      height: calc(var(--image-h) + 20px);
+      background-image: var(--bg);
+      top: 0;
+      left: 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top left;
+      pointer-events: none;
+      filter: blur(6px);
+      opacity: .2;
+    }
+    &__info {
+      text-align: center;
+      font-family: var(--ff-i);
+    }
+    &__counter {
+      font-size: var(--t-sm);
+      color: #8d8fa8;
+    }
+    &__remaining {
+      color: rgba(var(--clr-y), 1);
+    }
+    &__preview {
+      height: var(--image-h);
+      width: 100%;
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background-image: var(--bg);
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-size: cover;
+    }
+  }
+}
+
+@include tablet {
+  .live {
+    --image-h: 140px;
+    &-item {
+      min-height: 260px;
+    }
+    &-list {
+      grid-gap: 1rem;
+    }
+  }
+}

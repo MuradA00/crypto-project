@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="En-en">
+@include('partials/head.html')
+
+<body>
+  @include('partials/_tape.html')
+  <main>
+    @include('partials/_cases.html')
+    @include('partials/_stats.html')
+  </main>
+  @include('partials/footer.html')
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.0/swiper-bundle.min.js" integrity="sha512-uRGAgdi/3oUy3PAbQAH/kkq5zNxEj/7KZbjL2AXVaGfYNvwBqaZTLD7v/n57H2r36wkkNpmCt8TAPVD9Rdq7qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+
+let sliderOne = document.querySelector(".slider-1");
+let sliderTwo = document.querySelector(".slider-2");
+let displayValOne = document.getElementById("range1");
+let displayValTwo = document.getElementById("range2");
+let minGap = 0;
+let sliderTrack = document.querySelector(".range-track");
+let sliderMaxValue;
+
+sliderMaxValue = parseInt(sliderOne.max);
+
+function slideOne() {
+  if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+    sliderOne.value = parseInt(sliderTwo.value) - minGap;
+  }
+  displayValOne.textContent = sliderOne.value;
+  fillColor();
+}
+
+function slideTwo() {
+  if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+    sliderTwo.value = parseInt(sliderOne.value) + minGap;
+  }
+  displayValTwo.textContent = sliderTwo.value;
+  fillColor();
+}
+
+sliderOne.addEventListener("input", slideOne);
+sliderTwo.addEventListener("input", slideTwo);
+
+function fillColor() {
+  percent1 = (sliderOne.value / sliderMaxValue) * 100;
+  percent2 = (sliderTwo.value / sliderMaxValue) * 100;
+  displayValOne.style.left = `${percent1}%`;
+  displayValTwo.style.left = `calc(${percent2}% - 12px)`;
+  sliderTrack.style.background = `linear-gradient(to right, rgba(var(--bg-range), 1) ${percent1}%, rgba(var(--clr-r), 1) ${percent1}%, rgba(var(--clr-y), 1) ${percent2}%, rgba(var(--bg-range), 1) ${percent2}%)`;
+}
+
+slideOne();
+slideTwo();
+</script>
+<script src="js/main.js"></script>
+</html>

@@ -1,0 +1,209 @@
+.cases {
+  &-box  {
+    padding: 24px 0;
+    position: relative;
+    &:nth-child(1) {
+      margin-bottom: 36px;
+    }
+    &--bg {
+      padding: 64px 0;
+      &::after {
+        @include pseudo;
+        width: 100vw;
+        height: 100%;
+        background-color: #202236;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      & > * {
+        z-index: 1;
+        position: relative;
+      }
+    }
+  }
+  &-heading {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    grid-gap: 6px;
+    &__icon {
+      max-width: 2.25rem;
+    }
+    &__flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-gap: 20px;
+    }
+    &__subheading {
+      font-size: var(--t-sm);
+      color: #9799b0;
+      font-weight: 500;
+    }
+  }
+  &-sphere {
+    max-width: 140px;
+    position: relative;
+    transition: transform 300ms ease;
+    filter: drop-shadow(14px 8px 14px rgba(0,0,0,.5));
+    img {
+      width: 100%;
+    }
+  }
+  &-title {
+    font-family: var(--ff-i);
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 100%;
+  }
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: clamp(2rem, 3.375vw, 54px) clamp(24px, 3.125vw, 50px);
+  }
+  &-item {
+    background-color: #23263c;
+    border-radius: 1.25rem;
+    min-height: 284px;
+    padding: .5rem 1rem;
+    position: relative;
+    @include hover {
+      .cases-sphere {
+        transform: scale(1.05);
+      }
+    }
+    &::before {
+      @include pseudo;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(170deg, var(--clr), #23263c 60%);
+      top: 0;
+      opacity: .8;
+      left: 0;
+      border-radius: inherit;
+      pointer-events: none;
+    }
+    &--blue {
+      --clr: #334e94;
+    }
+    &--purple {
+      --clr: #3f2c70;
+    }
+    &--orange {
+      --clr: #6e5d5a;
+    }
+    &--green {
+      --clr: #295752;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      grid-gap: 26px;
+      height: 100%;
+      transform: translateY(-2rem);
+    }
+  }
+  &-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    &__name {
+      font-weight: 700;
+      font-size: var(--t-xl);
+      text-transform: uppercase;
+    }
+    &__type {
+      color: #626684;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+  }
+  &-open {
+    --y: 0;
+    --h: 44px;
+    max-width: 120px;
+    width: 100%;
+    align-self: center;
+    border-radius: 1.5rem;
+    position: relative;
+    border-top: none;
+    overflow: hidden;
+    background-color: transparent;
+    &::before {
+      @include pseudo;
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+      background-color: #23263c;
+      top: 50%;
+      left: 50%;
+      border-radius: inherit;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 300ms ease;
+    }
+    & > * {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, var(--y));
+      transition: all 300ms ease;
+    }
+    &__text {
+      --y: -50%;
+    }
+    &__hidden {
+      --y: -100%;
+      font-weight: 800;
+      text-transform: uppercase;
+      opacity: 0;
+      scale: .95;
+    }
+    @include hover {
+      .cases-open__hidden {
+        opacity: 1;
+        --y: -50%;
+      }
+      .cases-open__text {
+        opacity: 0;
+        --y: 100%;
+      }
+      &::after {
+        opacity: 1 !important;
+      }
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .cases {
+    &-heading {
+      &__flex {
+        grid-gap: 10px;
+      }
+      &__icon {
+        max-width: 1.5rem;
+      }
+    }
+    &-item {
+      min-height: 240px;
+    }
+    &-title {
+      font-size: var(--t-lg);
+    }
+    &-sphere {
+      max-width: 94px;
+    }
+  }
+}
