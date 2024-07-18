@@ -61,11 +61,11 @@
 @include tablet {
   .tape {
     &-row {
-      grid-gap: 1rem;
+      grid-gap: .75rem;
     }
     &-item {
       grid-gap: .5rem;
-      min-height: 64px;
+      min-height: 54px;
       min-width: 140px;
       padding: 0 1rem;
     }
@@ -73,7 +73,7 @@
       font-size: var(--t-xs);
     }
     &-icon {
-      width: 2.5rem;
+      width: 2rem;
     }
   }
 }
