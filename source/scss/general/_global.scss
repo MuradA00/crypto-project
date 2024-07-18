@@ -224,6 +224,9 @@ input[type="number"] {
   margin-bottom: 50px;
   text-transform: uppercase;
   text-align: center;
+  @include laptop {
+    font-size: 22px;
+  }
 }
 
 // .panel,

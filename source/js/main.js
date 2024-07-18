@@ -3,7 +3,7 @@ import './_vendor';
 // import './_components';
 
 
-const accsItems = document.querySelectorAll('.faq-list__item');
+const accs = document.querySelectorAll('.accordions__item');
 const mobNav = document.querySelector('.header-nav');
 const panelMenu = document.querySelector('.menu-burger');
 const winModal = document.querySelector('#win-modal')
@@ -97,23 +97,22 @@ if (mobNav) {
   panelMenu.addEventListener('click', menuHandler);
 }
 
-if (accsItems) {
-  accsItems.forEach(item => {
-    const itemHeader = item.querySelector('.faq-list__header')
-    itemHeader.addEventListener('click', function() {
-      item.classList.toggle('faq-list__item--active')
-      const hiddenBlock = item.querySelector('.faq-list__hidden')
-      const hiddenContent = item.querySelector('.faq-list__content')
+if (accs.length > 0) {
+  accs.forEach(acc => {
+    acc.addEventListener('click', function() {
+      const hiddenContentHeight = acc.querySelector('.accordions-content').scrollHeight + 'px';
+      const hiddenContainer = acc.querySelector('.accordions__item-hidden');
 
-      if (item.classList.contains('faq-list__item--active')) {
-        hiddenBlock.style.maxHeight = `${hiddenContent.scrollHeight}px`;
+      this.classList.toggle('accordions--collapse');
+
+      if (acc.classList.contains('accordions--collapse')) {
+        hiddenContainer.style.maxHeight = `${hiddenContentHeight}`;
       }
-      if (!item.classList.contains('faq-list__item--active')) {
-        hiddenBlock.style.maxHeight = 0;
+      else {
+        hiddenContainer.style.maxHeight = 0;
       }
     })
   })
-
 }
 
 function initSelect(elem){
