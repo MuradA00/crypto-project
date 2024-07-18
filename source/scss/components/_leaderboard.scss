@@ -342,6 +342,9 @@
       min-width: auto;
       width: 100%;
       min-height: 3.5rem;
+      &__inner {
+        justify-content: center;
+      }
       &__name {
         font-size: var(--t-sm);
       }
