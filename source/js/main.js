@@ -147,6 +147,7 @@ if (Swiper) {
     speed: 300,
     slidesPerView: 1,
     autoplay: true,
+    spaceBetween: 40,
     pagination: {
       clickable: true,
       el: '.slider-pagination'

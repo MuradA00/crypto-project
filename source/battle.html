@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="En-en">
+@include('partials/head.html')
+
+<body>
+  @include('partials/_tape.html')
+  <main>
+    <div class="battle-top container">
+      <div class="heading battle-heading">
+        <a href="#" class="heading-return">
+          <span>< Вернуться</span>
+          <img class="heading-return__icon" src="img/sprite/arrow-left.svg" alt="arrow-left">
+        </a>
+        <div class="heading-center">
+          <h1 class="heading-title">
+            кейс баттл
+          </h1>
+        </div>
+        <button class="heading-sound">
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 384 384" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><path d="M288 192c0-37.653-21.76-70.187-53.333-85.867v171.84C266.24 262.187 288 229.653 288 192zM0 128v128h85.333L192 362.667V21.333L85.333 128z" fill="" opacity="1" data-original="#000000"></path><path d="M234.667 4.907V48.96C296.32 67.307 341.333 124.373 341.333 192S296.32 316.693 234.667 335.04v44.053C320.107 359.68 384 283.413 384 192S320.107 24.32 234.667 4.907z" fill="" opacity="1" data-original="#000000"></path></g></svg>
+        </button>
+      </div>
+    </div>
+    <section class="battle">
+      <div class="battle__container container">
+        <div class="battle-inner">
+          <div class="battle-slots slots box">
+            <div class="slots-flex">
+              <div class="slots-icon">
+                <img src="img/sprite/users-icon.svg" alt="icons">
+              </div>
+              <ul class="slots-numbers">
+                <button class="slots-item slots-item--selected">
+                  2
+                </button>
+                <button class="slots-item">
+                  3
+                </button>
+                <button class="slots-item">
+                  4
+                </button>
+              </ul>
+            </div>
+            <button class="slots-button button">
+              <svg width='18px' height='18px'>
+                <use href='img/sprite/sprite.svg#plusIcon'></use>
+              </svg>
+              <span>
+                создать битву
+              </span>
+            </b>
+          </div>
+          <div class="battle-box box">
+            <ul class="battle-box__list">
+              <li class="battle-box__item">
+                <div class="battle-box__col battle-area-order">
+                  <div class="battle-box__order">
+                    <div class="battle-box__order-shape">
+                      8
+                    </div>
+                    <span class="battle-box__order-value">
+                      Раундов
+                    </span>
+                  </div>
+                </div>
+                <div class="battle-box__main battle-area-cases">
+                  <ul class="battle-cases">
+                    <li class="battle-cases__item">
+                      <div class="battle-cases__image-container">
+                        <img src="img/cases/spherePurple.webp" alt="case-icon">
+                      </div>
+                    </li>
+                    <li class="battle-cases__item">
+                      <div class="battle-cases__image-container">
+                        <img src="img/cases/spherePurple.webp" alt="case-icon">
+                      </div>
+
+                    </li>
+                    <li class="battle-cases__item">
+                      <div class="battle-cases__image-container">
+                        <img src="img/cases/spherePurple.webp" alt="case-icon">
+                      </div>
+
+                    </li>
+                  </ul>
+                  <div class="battle-cases__total">
+                    <span class="battle-cases__total-price">
+                      $4.690
+                    </span>
+                    <span class="battle-cases__total-subheading">Стоимость</span>
+                  </div>
+                </div>
+                <div class="battle-box__col battle-area-users">
+                  <ul class="battle-box__users users">
+                    <li class="battle-box__users-item users-item">
+                      <button class="users-item__container">
+                        <div class="users-item__user-icon">
+                          <img src="img/global/userImage.webp" alt="user-icon">
+                        </div>
+                        <div class="users-item__add-box">
+                          <span class="users-item__add-box_bar"></span>
+                          <span class="users-item__add-box_bar"></span>
+                        </div>
+                      </button>
+                    </li>
+                    <li class="battle-box__users-item users-item">
+                      <button class="users-item__container">
+                        <div class="users-item__add-box">
+                          <span class="users-item__add-box_bar"></span>
+                          <span class="users-item__add-box_bar"></span>
+                        </div>
+                      </button>
+                    </li>
+                    <li class="battle-box__users-item users-item">
+                      <button class="users-item__container">
+                        <div class="users-item__add-box">
+                          <span class="users-item__add-box_bar"></span>
+                          <span class="users-item__add-box_bar"></span>
+                        </div>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="battle-box__actions battle-area-actions">
+                  <button class="battle-box__join button">
+                    <svg width='14px' height='14px'>
+                      <use href='img/sprite/sprite.svg#playIcon'></use>
+                    </svg>
+                    <span>войти</span>
+                  </button>
+                  <button class="battle-box__view">
+                    <svg width='20px' height='16px'>
+                      <use href='img/sprite/sprite.svg#eyeIcon'></use>
+                    </svg>
+                    смотреть
+                  </button>
+                </div>
+              </li>
+              <li class="battle-box__item">
+                <div class="battle-box__col battle-area-order">
+                  <div class="battle-box__order">
+                    <div class="battle-box__order-shape">
+                      8
+                    </div>
+                    <span class="battle-box__order-value">
+                      Раундов
+                    </span>
+                  </div>
+                </div>
+                <div class="battle-box__main battle-area-cases">
+                  <ul class="battle-cases">
+                    <li class="battle-cases__item">
+                      <div class="battle-cases__image-container">
+                        <img src="img/cases/spherePurple.webp" alt="case-icon">
+                      </div>
+                    </li>
+                    <li class="battle-cases__item">
+                      <div class="battle-cases__image-container">
+                        <img src="img/cases/spherePurple.webp" alt="case-icon">
+                      </div>
+
+                    </li>
+                    <li class="battle-cases__item">
+                      <div class="battle-cases__image-container">
+                        <img src="img/cases/spherePurple.webp" alt="case-icon">
+                      </div>
+
+                    </li>
+                  </ul>
+                  <div class="battle-cases__total">
+                    <span class="battle-cases__total-price">
+                      $4.690
+                    </span>
+                    <span class="battle-cases__total-subheading">Стоимость</span>
+                  </div>
+                </div>
+                <div class="battle-box__col battle-area-users">
+                  <ul class="battle-box__users users">
+                    <li class="battle-box__users-item users-item">
+                      <button class="users-item__container">
+                        <div class="users-item__user-icon">
+                          <img src="img/global/userImage.webp" alt="user-icon">
+                        </div>
+                        <div class="users-item__add-box">
+                          <span class="users-item__add-box_bar"></span>
+                          <span class="users-item__add-box_bar"></span>
+                        </div>
+                      </button>
+                    </li>
+                    <li class="battle-box__users-item users-item">
+                      <button class="users-item__container">
+                        <div class="users-item__add-box">
+                          <span class="users-item__add-box_bar"></span>
+                          <span class="users-item__add-box_bar"></span>
+                        </div>
+                      </button>
+                    </li>
+                    <li class="battle-box__users-item users-item">
+                      <button class="users-item__container">
+                        <div class="users-item__add-box">
+                          <span class="users-item__add-box_bar"></span>
+                          <span class="users-item__add-box_bar"></span>
+                        </div>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="battle-box__actions battle-area-actions">
+                  <button class="battle-box__join button">
+                    <svg width='14px' height='14px'>
+                      <use href='img/sprite/sprite.svg#playIcon'></use>
+                    </svg>
+                    <span>войти</span>
+                  </button>
+                  <button class="battle-box__view">
+                    <svg width='20px' height='16px'>
+                      <use href='img/sprite/sprite.svg#eyeIcon'></use>
+                    </svg>
+                    смотреть
+                  </button>
+                </div>
+              </li>
+              <li class="battle-box__item">
+                <div class="battle-box__col battle-area-order">
+                  <div class="battle-box__order">
+                    <div class="battle-box__order-shape">
+                      8
+                    </div>
+                    <span class="battle-box__order-value">
+                      Раундов
+                    </span>
+                  </div>
+                </div>
+                <div class="battle-box__main battle-area-cases">
+                  <ul class="battle-cases">
+                    <li class="battle-cases__item">
+                      <div class="battle-cases__image-container">
+                        <img src="img/cases/spherePurple.webp" alt="case-icon">
+                      </div>
+                    </li>
+                    <li class="battle-cases__item">
+                      <div class="battle-cases__image-container">
+                        <img src="img/cases/spherePurple.webp" alt="case-icon">
+                      </div>
+
+                    </li>
+                    <li class="battle-cases__item">
+                      <div class="battle-cases__image-container">
+                        <img src="img/cases/spherePurple.webp" alt="case-icon">
+                      </div>
+
+                    </li>
+                  </ul>
+                  <div class="battle-cases__total">
+                    <span class="battle-cases__total-price">
+                      $4.690
+                    </span>
+                    <span class="battle-cases__total-subheading">Стоимость</span>
+                  </div>
+                </div>
+                <div class="battle-box__col battle-area-users">
+                  <ul class="battle-box__users users">
+                    <li class="battle-box__users-item users-item">
+                      <button class="users-item__container">
+                        <div class="users-item__user-icon">
+                          <img src="img/global/userImage.webp" alt="user-icon">
+                        </div>
+                        <div class="users-item__add-box">
+                          <span class="users-item__add-box_bar"></span>
+                          <span class="users-item__add-box_bar"></span>
+                        </div>
+                      </button>
+                    </li>
+                    <li class="battle-box__users-item users-item">
+                      <button class="users-item__container">
+                        <div class="users-item__add-box">
+                          <span class="users-item__add-box_bar"></span>
+                          <span class="users-item__add-box_bar"></span>
+                        </div>
+                      </button>
+                    </li>
+                    <li class="battle-box__users-item users-item">
+                      <button class="users-item__container">
+                        <div class="users-item__add-box">
+                          <span class="users-item__add-box_bar"></span>
+                          <span class="users-item__add-box_bar"></span>
+                        </div>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="battle-box__actions battle-area-actions">
+                  <button class="battle-box__join button">
+                    <svg width='14px' height='14px'>
+                      <use href='img/sprite/sprite.svg#playIcon'></use>
+                    </svg>
+                    <span>войти</span>
+                  </button>
+                  <button class="battle-box__view">
+                    <svg width='20px' height='16px'>
+                      <use href='img/sprite/sprite.svg#eyeIcon'></use>
+                    </svg>
+                    смотреть
+                  </button>
+                </div>
+              </li>
+              <li class="battle-box__item">
+                <div class="battle-box__col battle-area-order">
+                  <div class="battle-box__order">
+                    <div class="battle-box__order-shape">
+                      8
+                    </div>
+                    <span class="battle-box__order-value">
+                      Раундов
+                    </span>
+                  </div>
+                </div>
+                <div class="battle-box__main battle-area-cases">
+                  <ul class="battle-cases">
+                    <li class="battle-cases__item">
+                      <div class="battle-cases__image-container">
+                        <img src="img/cases/spherePurple.webp" alt="case-icon">
+                      </div>
+                    </li>
+                    <li class="battle-cases__item">
+                      <div class="battle-cases__image-container">
+                        <img src="img/cases/spherePurple.webp" alt="case-icon">
+                      </div>
+
+                    </li>
+                    <li class="battle-cases__item">
+                      <div class="battle-cases__image-container">
+                        <img src="img/cases/spherePurple.webp" alt="case-icon">
+                      </div>
+
+                    </li>
+                  </ul>
+                  <div class="battle-cases__total">
+                    <span class="battle-cases__total-price">
+                      $4.690
+                    </span>
+                    <span class="battle-cases__total-subheading">Стоимость</span>
+                  </div>
+                </div>
+                <div class="battle-box__col battle-area-users">
+                  <ul class="battle-box__users users">
+                    <li class="battle-box__users-item users-item">
+                      <button class="users-item__container">
+                        <div class="users-item__user-icon">
+                          <img src="img/global/userImage.webp" alt="user-icon">
+                        </div>
+                        <div class="users-item__add-box">
+                          <span class="users-item__add-box_bar"></span>
+                          <span class="users-item__add-box_bar"></span>
+                        </div>
+                      </button>
+                    </li>
+                    <li class="battle-box__users-item users-item">
+                      <button class="users-item__container">
+                        <div class="users-item__add-box">
+                          <span class="users-item__add-box_bar"></span>
+                          <span class="users-item__add-box_bar"></span>
+                        </div>
+                      </button>
+                    </li>
+                    <li class="battle-box__users-item users-item">
+                      <button class="users-item__container">
+                        <div class="users-item__add-box">
+                          <span class="users-item__add-box_bar"></span>
+                          <span class="users-item__add-box_bar"></span>
+                        </div>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="battle-box__actions battle-area-actions">
+                  <button class="battle-box__join button">
+                    <svg width='14px' height='14px'>
+                      <use href='img/sprite/sprite.svg#playIcon'></use>
+                    </svg>
+                    <span>войти</span>
+                  </button>
+                  <button class="battle-box__view">
+                    <svg width='20px' height='16px'>
+                      <use href='img/sprite/sprite.svg#eyeIcon'></use>
+                    </svg>
+                    смотреть
+                  </button>
+                </div>
+              </li>
+              <li class="battle-box__item">
+                <div class="battle-box__col battle-area-order">
+                  <div class="battle-box__order">
+                    <div class="battle-box__order-shape">
+                      8
+                    </div>
+                    <span class="battle-box__order-value">
+                      Раундов
+                    </span>
+                  </div>
+                </div>
+                <div class="battle-box__main battle-area-cases">
+                  <ul class="battle-cases">
+                    <li class="battle-cases__item">
+                      <div class="battle-cases__image-container">
+                        <img src="img/cases/spherePurple.webp" alt="case-icon">
+                      </div>
+                    </li>
+                    <li class="battle-cases__item">
+                      <div class="battle-cases__image-container">
+                        <img src="img/cases/spherePurple.webp" alt="case-icon">
+                      </div>
+
+                    </li>
+                    <li class="battle-cases__item">
+                      <div class="battle-cases__image-container">
+                        <img src="img/cases/spherePurple.webp" alt="case-icon">
+                      </div>
+
+                    </li>
+                  </ul>
+                  <div class="battle-cases__total">
+                    <span class="battle-cases__total-price">
+                      $4.690
+                    </span>
+                    <span class="battle-cases__total-subheading">Стоимость</span>
+                  </div>
+                </div>
+                <div class="battle-box__col battle-area-users">
+                  <ul class="battle-box__users users">
+                    <li class="battle-box__users-item users-item">
+                      <button class="users-item__container">
+                        <div class="users-item__user-icon">
+                          <img src="img/global/userImage.webp" alt="user-icon">
+                        </div>
+                        <div class="users-item__add-box">
+                          <span class="users-item__add-box_bar"></span>
+                          <span class="users-item__add-box_bar"></span>
+                        </div>
+                      </button>
+                    </li>
+                    <li class="battle-box__users-item users-item">
+                      <button class="users-item__container">
+                        <div class="users-item__add-box">
+                          <span class="users-item__add-box_bar"></span>
+                          <span class="users-item__add-box_bar"></span>
+                        </div>
+                      </button>
+                    </li>
+                    <li class="battle-box__users-item users-item">
+                      <button class="users-item__container">
+                        <div class="users-item__add-box">
+                          <span class="users-item__add-box_bar"></span>
+                          <span class="users-item__add-box_bar"></span>
+                        </div>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="battle-box__actions battle-area-actions">
+                  <button class="battle-box__join button">
+                    <svg width='14px' height='14px'>
+                      <use href='img/sprite/sprite.svg#playIcon'></use>
+                    </svg>
+                    <span>войти</span>
+                  </button>
+                  <button class="battle-box__view">
+                    <svg width='20px' height='16px'>
+                      <use href='img/sprite/sprite.svg#eyeIcon'></use>
+                    </svg>
+                    смотреть
+                  </button>
+                </div>
+              </li>
+              <li class="battle-box__item">
+                <div class="battle-box__col battle-area-order">
+                  <div class="battle-box__order">
+                    <div class="battle-box__order-shape">
+                      8
+                    </div>
+                    <span class="battle-box__order-value">
+                      Раундов
+                    </span>
+                  </div>
+                </div>
+                <div class="battle-box__main battle-area-cases">
+                  <ul class="battle-cases">
+                    <li class="battle-cases__item">
+                      <div class="battle-cases__image-container">
+                        <img src="img/cases/spherePurple.webp" alt="case-icon">
+                      </div>
+                    </li>
+                    <li class="battle-cases__item">
+                      <div class="battle-cases__image-container">
+                        <img src="img/cases/spherePurple.webp" alt="case-icon">
+                      </div>
+
+                    </li>
+                    <li class="battle-cases__item">
+                      <div class="battle-cases__image-container">
+                        <img src="img/cases/spherePurple.webp" alt="case-icon">
+                      </div>
+
+                    </li>
+                  </ul>
+                  <div class="battle-cases__total">
+                    <span class="battle-cases__total-price">
+                      $4.690
+                    </span>
+                    <span class="battle-cases__total-subheading">Стоимость</span>
+                  </div>
+                </div>
+                <div class="battle-box__col battle-area-users">
+                  <ul class="battle-box__users users">
+                    <li class="battle-box__users-item users-item">
+                      <button class="users-item__container">
+                        <div class="users-item__user-icon">
+                          <img src="img/global/userImage.webp" alt="user-icon">
+                        </div>
+                        <div class="users-item__add-box">
+                          <span class="users-item__add-box_bar"></span>
+                          <span class="users-item__add-box_bar"></span>
+                        </div>
+                      </button>
+                    </li>
+                    <li class="battle-box__users-item users-item">
+                      <button class="users-item__container">
+                        <div class="users-item__add-box">
+                          <span class="users-item__add-box_bar"></span>
+                          <span class="users-item__add-box_bar"></span>
+                        </div>
+                      </button>
+                    </li>
+                    <li class="battle-box__users-item users-item">
+                      <button class="users-item__container">
+                        <div class="users-item__add-box">
+                          <span class="users-item__add-box_bar"></span>
+                          <span class="users-item__add-box_bar"></span>
+                        </div>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="battle-box__actions battle-area-actions">
+                  <button class="battle-box__join button">
+                    <svg width='14px' height='14px'>
+                      <use href='img/sprite/sprite.svg#playIcon'></use>
+                    </svg>
+                    <span>войти</span>
+                  </button>
+                  <button class="battle-box__view">
+                    <svg width='20px' height='16px'>
+                      <use href='img/sprite/sprite.svg#eyeIcon'></use>
+                    </svg>
+                    смотреть
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    @include('partials/_stats.html')
+  </main>
+
+  @include('partials/footer.html')
+</body>
+<script src="js/main.js"></script>
+
+</html>

@@ -1,6 +1,67 @@
 .tape {
   --h: 90px;
   padding: 24px 0;
+  position: relative;
+  &::before {
+    @include pseudo;
+    width: 15%;
+    height: 100%;
+    pointer-events: none;
+    background-image: linear-gradient(to right, transparent, #1e1f32);
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+  &-panel {
+    background-color: #272941;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    &__button {
+      width: 100%;
+      height: 50%;
+      border-radius: inherit;
+      @include dfc;
+      grid-gap: 8px;
+      min-height: auto !important;
+      svg, img {
+        width: 14px;
+        height: 14px;
+        fill: rgba(var(--clr-y), 1);
+        transition: fill 300ms ease;
+      }
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      position: relative;
+      border-top: 1px solid transparent;
+      & > * {
+        position: relative;
+        z-index: 1;
+      }
+      &::after {
+        @include pseudo;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to bottom, #389ef2, #7056d0);
+        transition: opacity 300ms ease;
+        top: 0;
+        left: 0;
+        border-radius: inherit;
+        pointer-events: none;
+        opacity: 0;
+      }
+      &--selected {
+        svg {
+          fill: rgba(var(--clr-w), 1);
+        }
+        border-top: 1px solid #4cddff;
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
   &-flex {
     display: grid;
     grid-template-columns: 80px 1fr;
@@ -11,7 +72,33 @@
     align-items: center;
     grid-gap: 20px;
   }
+  &-hidden {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    scale: .95;
+    transform-origin: top left;
+    transition: all 300ms ease;
+    pointer-events: none;
+    &__image {
+      height: 54px;
+      @include dfc;
+      img {
+        height: inherit;
+        object-fit: contain;
+      }
+    }
+    &__name {
+      font-weight: 700;
+      font-size: var(--t-sm);
+      font-family: var(--ff-g);
+    }
+  }
   &-item {
+    position: relative;
     min-height: var(--h);
     min-width: 212px;
     border-radius: 20px;
@@ -25,6 +112,18 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-color: #282a41;
+    @include hover {
+      .tape-info,
+      .tape-icon {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .tape-hidden {
+        scale: 1;
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
     &--blue {
       --bg: url('../../img/tape/tapeItemBlue.webp')
     }
@@ -46,6 +145,7 @@
     align-items: flex-start;
     font-size: var(--t-sm);
     font-weight: 500;
+    transition: all 300ms ease;
     & > * {
       line-height: 140%;
     }
@@ -53,19 +153,37 @@
   &-icon {
     width: 56px;
     aspect-ratio: 1 / 1;
-    transition: scale 300ms ease;
+    transition: all 300ms ease;
     flex: 0 0 auto;
   }
 }
 
 @include tablet {
   .tape {
+    padding: .5rem 0;
+    &-flex {
+      grid-gap: 8px;
+      grid-template-columns: 40px 1fr;
+    }
+    &-panel {
+      span {
+        display: none;
+      }
+    }
+    &-hidden {
+      &__image {
+        height: 2rem;
+      }
+      &__name {
+        font-size: var(--t-xs);
+      }
+    }
     &-row {
       grid-gap: .75rem;
     }
     &-item {
       grid-gap: .5rem;
-      min-height: 54px;
+      min-height: 64px;
       min-width: 140px;
       padding: 0 1rem;
     }

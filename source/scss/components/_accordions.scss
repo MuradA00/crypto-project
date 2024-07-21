@@ -89,6 +89,7 @@
 @include laptop {
   .accordions {
     &__item-visible {
+      min-height: 54px;
       padding: 0 60px 0 1rem;
     }
   }

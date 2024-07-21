@@ -4,7 +4,7 @@
 
   @include dfc;
   text-align: center;
-
+  grid-gap: 12px;
   font-size: 19px;
   font-weight: 400;
   font-family: var(--ff-i);
@@ -24,7 +24,7 @@
     border-radius: inherit;
     pointer-events: none;
   }
-  & > * {position: relative;z-index: 1;}
+  & > * {position: relative;z-index: 1;text-transform: uppercase;}
   @include hover {
     &::after {
       opacity: 0;

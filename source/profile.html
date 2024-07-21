@@ -3,13 +3,22 @@
 @include('partials/head.html')
 
 <body>
+  @include('partials/_tape.html')
   <main>
     <section class="profile">
       <div class="profile-container container">
+        <div class="heading open-top">
+          <a href="#" class="heading-return">
+            <span>< Вернуться</span>
+            <img class="heading-return__icon" src="img/sprite/arrow-left.svg" alt="arrow-left">
+          </a>
+          <div class="heading-center">
+            <h1 class="heading-title">
+              профиль пользователя
+            </h1>
+          </div>
+        </div>
         <div class="profile-body">
-          <h1 class="profile-title global-title">
-            профиль пользователя
-          </h1>
           <div class="profile-dashboard panel panel-box">
             <div class="profile-user user">
               <div class="user-image">

@@ -208,12 +208,101 @@ input[type="number"] {
 .container {
   position: relative;
   width: 100%;
-  max-width: var(--container-width);
+  max-width: calc(var(--container-offset) * 2 + var(--container-width));
   margin: 0 auto;
   padding: 0 var(--container-offset);
 
   &--wide {
     --container-width: 1844px;
+  }
+}
+
+.users {
+  --bg-user-container: #17121b;
+  --user-container-ratio: 64px;
+  --plus-container-ratio: 1rem;
+
+  display: flex;
+  align-items: center;
+  grid-gap: 1rem;
+  &-item {
+    width: var(--user-container-ratio);
+    height: var(--user-container-ratio);
+    flex: 0 0 auto;
+    border-radius: var(--root-corner-radius);
+    background-color: var(--bg-user-container);
+    position: relative;
+
+    border: 2px solid rgba(var(--clr-y), 1);
+    &__user-icon {
+      aspect-ratio: 1 / 1;
+
+      position: absolute;
+      width: 64px;
+      height: 64px;
+      z-index: 1;
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        border-radius: var(--root-corner-radius);
+      }
+    }
+    &__container {
+      background-color: #232539;
+
+      border-radius: var(--root-corner-radius);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+
+      width: 100%;
+      height: 100%;
+    }
+    &__add-box {
+      width: var(--plus-container-ratio);
+      height: var(--plus-container-ratio);
+
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+
+      &_bar {
+        position: absolute;
+
+        background-color: rgba(var(--clr-y), 1);
+        width: var(--bar-w);
+        height: var(--bar-h);
+
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%) rotate(var(--bar-rotate));
+
+        display: block;
+
+        &:nth-child(1) {
+          --bar-rotate: 90deg;
+          --bar-w: 100%;
+          --bar-h: 3px;
+        }
+        &:nth-child(2) {
+          --bar-rotate: -90deg;
+          --bar-w: 3px;
+          --bar-h: 100%;
+        }
+      }
+    }
   }
 }
 

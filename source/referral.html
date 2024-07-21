@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="En-en">
+@include('partials/head.html')
+
+<body>
+  @include('partials/_tape.html')
+  <main>
+    <div class="referral-header">
+      <div class="referral-container container">
+        <h1 class="referral-title global-title">
+          реферальная система
+        </h1>
+      </div>
+    </div>
+    <section class="referral">
+      <div class="referral-container container">
+        <div class="referral-body">
+          <div class="referral-inner">
+            <div class="referral-banner">
+              <span class="referral-banner__description">banner</span>
+            </div>
+            <div class="referral-user">
+              <div class="profile-user user">
+                <div class="user-image">
+                  <img src="img/global/userImage.webp" alt="userImage">
+                </div>
+                <div class="user-info">
+                  <div class="user-header">
+                    <span class="user-name">
+                      James Corvet
+                    </span>
+                    <span class="user-id">
+                      Ваша реферальная ссылка
+                    </span>
+                  </div>
+                  <div class="referral-link">
+                    <div class="referral-field">
+                      <input
+                        value="https://crypto-case.com/?start=a766d17864535193" class="input"
+                        type="text"
+                        disabled
+                      >
+                    </div>
+                    <button class="referral-share">
+                      <img src="img/global/share-icon.svg">
+                      <span>поделиться</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="referral-progress">
+              <div class="referral-progress__header">
+                <div class="referral-progress__col">
+                  <span class="referral-progress__counter">
+                    Счетчик рефералов
+                  </span>
+                </div>
+                <div class="referral-progress__col">
+                  <span class="referral-progress__remaining">
+                    До получения приза осталось
+                    <span class="referral-progress__remaining-hl">
+                      97 рефералов
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <div class="referral-bar">
+                <ul class="referral-dividers">
+                  <li class="referral-dividers__item referral-dividers__item--active">
+                    <div class="referral-dividers__bars">
+                      <span></span>
+                      <span></span>
+                    </div>
+                    <span class="referral-dividers__value">
+                      0%
+                    </span>
+                  </li>
+                  <li class="referral-dividers__item referral-dividers__item--active">
+                    <div class="referral-dividers__bars">
+                      <span></span>
+                      <span></span>
+                    </div>
+                    <span class="referral-dividers__value">
+                      10%
+                    </span>
+                  </li>
+                  <li class="referral-dividers__item referral-dividers__item--active">
+                    <div class="referral-dividers__bars">
+                      <span></span>
+                      <span></span>
+                    </div>
+                    <span class="referral-dividers__value">
+                      20%
+                    </span>
+                  </li>
+                  <li class="referral-dividers__item referral-dividers__item--active">
+                    <div class="referral-dividers__bars">
+                      <span></span>
+                      <span></span>
+                    </div>
+                    <span class="referral-dividers__value">
+                      30%
+                    </span>
+                  </li>
+                  <li class="referral-dividers__item referral-dividers__item--active">
+                    <div class="referral-dividers__bars">
+                      <span></span>
+                      <span></span>
+                    </div>
+                    <span class="referral-dividers__value">
+                      40%
+                    </span>
+                  </li>
+                  <li class="referral-dividers__item referral-dividers__item--active">
+                    <div class="referral-dividers__bars">
+                      <span></span>
+                      <span></span>
+                    </div>
+                    <span class="referral-dividers__value">
+                      50%
+                    </span>
+                  </li>
+                  <li class="referral-dividers__item referral-dividers__item--active">
+                    <div class="referral-dividers__bars">
+                      <span></span>
+                      <span></span>
+                    </div>
+                    <span class="referral-dividers__value">
+                      60%
+                    </span>
+                  </li>
+                  <li class="referral-dividers__item">
+                    <div class="referral-dividers__bars">
+                      <span></span>
+                      <span></span>
+                    </div>
+                    <span class="referral-dividers__value">
+                      70%
+                    </span>
+                  </li>
+                  <li class="referral-dividers__item">
+                    <div class="referral-dividers__bars">
+                      <span></span>
+                      <span></span>
+                    </div>
+                    <span class="referral-dividers__value">
+                      90%
+                    </span>
+                  </li>
+                  <li class="referral-dividers__item">
+                    <div class="referral-dividers__bars">
+                      <span></span>
+                      <span></span>
+                    </div>
+                    <span class="referral-dividers__value">
+                      100%
+                    </span>
+                  </li>
+                </ul>
+                <div style="width: 72%;" class="referral-bar__filled"></div>
+              </div>
+            </div>
+            <ul class="referral-stats">
+              <li class="referral-stats__item">
+                <div class="referral-stats__icon">
+                  <img src="img/sprite/user-icon.svg" alt="user-icon">
+                </div>
+                <div class="referral-stats__info">
+                  <span class="referral-stats__value">
+                    9.780
+                  </span>
+                  <p class="referral-stats__description">
+                    Всего рефералов
+                  </p>
+                </div>
+              </li>
+              <li class="referral-stats__item">
+                <div class="referral-stats__icon">
+                  <img src="img/sprite/user-icon.svg" alt="user-icon">
+                </div>
+                <div class="referral-stats__info">
+                  <span class="referral-stats__value">
+                    $ 110.570
+                  </span>
+                  <p class="referral-stats__description">
+                    Реферальные депозиты
+                  </p>
+                </div>
+              </li>
+              <li class="referral-stats__item">
+                <div class="referral-stats__icon">
+                  <img src="img/sprite/user-icon.svg" alt="user-icon">
+                </div>
+                <div class="referral-stats__info">
+                  <span class="referral-stats__value">
+                    $ 7.580
+                  </span>
+                  <p class="referral-stats__description">
+                    Заработок с рефералов
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <div class="referral-store">
+              <div class="referral-store__info">
+                <p class="referral-store__description">
+                  Хранилище дохода <span>(возможные к получению)</span>
+                </p>
+                <span class="referral-store__value">
+                  $ 750.930
+                </span>
+              </div>
+              <div class="referral-store__actions">
+                <button
+                  class="referral-store__button referral-store__button--yellow"
+                >
+                <span>Перевести на баланс сайта</span>
+              </button>
+                <button
+                  class="referral-store__button referral-store__button--blue"
+                >
+                <span>вывести на кошелёк</span>
+              </button>
+              </div>
+            </div>
+            <div class="referral-table">
+              <div class="referral-table__heading">Ваши рефералы</div>
+              <div class="referral-table__inner">
+              <ul class="referral-cells">
+                <li class="referral-heads referral-cells__item">
+                  <span>Тип операции</span>
+                  <span>Всего поставлено</span>
+                  <span>Ваша прибыль</span>
+                  <span>Дата операции</span>
+                </li>
+                <li class="referral-row referral-cells__item">
+                  <span data-heading="Топ операции">Hugo Boss</span>
+                  <span data-heading="Всего поставлено">$ 650.41</span>
+                  <span data-heading="Ваша прибыль" class="referral-row__hl">+ $ 650.41</span>
+                  <span data-heading="Дата операции" class="referral-row__dark">07.05.2024 в 15:30</span>
+                </li>
+                <li class="referral-row referral-cells__item">
+                  <span data-heading="Топ операции">Hugo Boss</span>
+                  <span data-heading="Всего поставлено">$ 650.41</span>
+                  <span data-heading="Ваша прибыль" class="referral-row__hl">+ $ 650.41</span>
+                  <span data-heading="Дата операции" class="referral-row__dark">07.05.2024 в 15:30</span>
+                </li>
+                <li class="referral-row referral-cells__item">
+                  <span data-heading="Топ операции">Hugo Boss</span>
+                  <span data-heading="Всего поставлено">$ 650.41</span>
+                  <span data-heading="Ваша прибыль" class="referral-row__hl">+ $ 650.41</span>
+                  <span data-heading="Дата операции" class="referral-row__dark">07.05.2024 в 15:30</span>
+                </li>
+                <li class="referral-row referral-cells__item">
+                  <span data-heading="Топ операции">Hugo Boss</span>
+                  <span data-heading="Всего поставлено">$ 650.41</span>
+                  <span data-heading="Ваша прибыль" class="referral-row__hl">+ $ 650.41</span>
+                  <span data-heading="Дата операции" class="referral-row__dark">07.05.2024 в 15:30</span>
+                </li>
+                <li class="referral-row referral-cells__item">
+                  <span data-heading="Топ операции">Hugo Boss</span>
+                  <span data-heading="Всего поставлено">$ 650.41</span>
+                  <span data-heading="Ваша прибыль" class="referral-row__hl">+ $ 650.41</span>
+                  <span data-heading="Дата операции" class="referral-row__dark">07.05.2024 в 15:30</span>
+                </li>
+                <li class="referral-row referral-cells__item">
+                  <span data-heading="Топ операции">Hugo Boss</span>
+                  <span data-heading="Всего поставлено">$ 650.41</span>
+                  <span data-heading="Ваша прибыль" class="referral-row__hl">+ $ 650.41</span>
+                  <span data-heading="Дата операции" class="referral-row__dark">07.05.2024 в 15:30</span>
+                </li>
+                <li class="referral-row referral-cells__item">
+                  <span data-heading="Топ операции">Hugo Boss</span>
+                  <span data-heading="Всего поставлено">$ 650.41</span>
+                  <span data-heading="Ваша прибыль" class="referral-row__hl">+ $ 650.41</span>
+                  <span data-heading="Дата операции" class="referral-row__dark">07.05.2024 в 15:30</span>
+                </li>
+                <li class="referral-row referral-cells__item">
+                  <span data-heading="Топ операции">Hugo Boss</span>
+                  <span data-heading="Всего поставлено">$ 650.41</span>
+                  <span data-heading="Ваша прибыль" class="referral-row__hl">+ $ 650.41</span>
+                  <span data-heading="Дата операции" class="referral-row__dark">07.05.2024 в 15:30</span>
+                </li>
+                <li class="referral-row referral-cells__item">
+                  <span data-heading="Топ операции">Hugo Boss</span>
+                  <span data-heading="Всего поставлено">$ 650.41</span>
+                  <span data-heading="Ваша прибыль" class="referral-row__hl">+ $ 650.41</span>
+                  <span data-heading="Дата операции" class="referral-row__dark">07.05.2024 в 15:30</span>
+                </li>
+                <li class="referral-row referral-cells__item">
+                  <span data-heading="Топ операции">Hugo Boss</span>
+                  <span data-heading="Всего поставлено">$ 650.41</span>
+                  <span data-heading="Ваша прибыль" class="referral-row__hl">+ $ 650.41</span>
+                  <span data-heading="Дата операции" class="referral-row__dark">07.05.2024 в 15:30</span>
+                </li>
+                <li class="referral-row referral-cells__item">
+                  <span data-heading="Топ операции">Hugo Boss</span>
+                  <span data-heading="Всего поставлено">$ 650.41</span>
+                  <span data-heading="Ваша прибыль" class="referral-row__hl">+ $ 650.41</span>
+                  <span data-heading="Дата операции" class="referral-row__dark">07.05.2024 в 15:30</span>
+                </li>
+                <li class="referral-row referral-cells__item">
+                  <span data-heading="Топ операции">Hugo Boss</span>
+                  <span data-heading="Всего поставлено">$ 650.41</span>
+                  <span data-heading="Ваша прибыль" class="referral-row__hl">+ $ 650.41</span>
+                  <span data-heading="Дата операции" class="referral-row__dark">07.05.2024 в 15:30</span>
+                </li>
+              </ul>
+              </div>
+            </div>
+            <div class="referral-accordions">
+              <ul class="accordions">
+                <li class="accordions__item">
+                  <div class="accordions__item-visible">
+                    <div class="accordions__item-header">
+                      Я не нашел ответа на вопрос. Что делать?
+                    </div>
+                    <div class="accordions__item-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="10px" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 256 256" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><path d="M225.813 48.907 128 146.72 30.187 48.907 0 79.093l128 128 128-128z" fill="" data-original=""></path></g></svg>
+                    </div>
+                  </div>
+                  <div class="accordions__item-hidden">
+                    <div class="accordions-content">
+                      <p>
+                        Генерация рыбатекста происходит довольно просто: есть несколько фиксированных наборов фраз и словочетаний, из которых в опредёленном порядке формируются предложения.
+                        Предложения складываются в абзацы — и вы наслаждетесь очередным бредошедевром.
+                      </p>
+                      <p>
+                        Сама идея работы генератора заимствована у псевдосоветского "универсального кода речей", из которого мы выдернули используемые в нём словосочетания, запилили
+                        приличное количество собственных, в несколько раз усложнили алгоритм, добавив новые схемы сборки, — и оформили в виде быстрого и удобного сервиса для получения
+                        тестового контента.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordions__item">
+                  <div class="accordions__item-visible">
+                    <div class="accordions__item-header">
+                      Я не нашел ответа на вопрос. Что делать?
+                    </div>
+                    <div class="accordions__item-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="10px" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 256 256" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><path d="M225.813 48.907 128 146.72 30.187 48.907 0 79.093l128 128 128-128z" fill="" data-original=""></path></g></svg>
+                    </div>
+                  </div>
+                  <div class="accordions__item-hidden">
+                    <div class="accordions-content">
+                      <p>
+                        Генерация рыбатекста происходит довольно просто: есть несколько фиксированных наборов фраз и словочетаний, из которых в опредёленном порядке формируются предложения.
+                        Предложения складываются в абзацы — и вы наслаждетесь очередным бредошедевром.
+                      </p>
+                      <p>
+                        Сама идея работы генератора заимствована у псевдосоветского "универсального кода речей", из которого мы выдернули используемые в нём словосочетания, запилили
+                        приличное количество собственных, в несколько раз усложнили алгоритм, добавив новые схемы сборки, — и оформили в виде быстрого и удобного сервиса для получения
+                        тестового контента.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordions__item">
+                  <div class="accordions__item-visible">
+                    <div class="accordions__item-header">
+                      Я не нашел ответа на вопрос. Что делать?
+                    </div>
+                    <div class="accordions__item-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="10px" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 256 256" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><path d="M225.813 48.907 128 146.72 30.187 48.907 0 79.093l128 128 128-128z" fill="" data-original=""></path></g></svg>
+                    </div>
+                  </div>
+                  <div class="accordions__item-hidden">
+                    <div class="accordions-content">
+                      <p>
+                        Генерация рыбатекста происходит довольно просто: есть несколько фиксированных наборов фраз и словочетаний, из которых в опредёленном порядке формируются предложения.
+                        Предложения складываются в абзацы — и вы наслаждетесь очередным бредошедевром.
+                      </p>
+                      <p>
+                        Сама идея работы генератора заимствована у псевдосоветского "универсального кода речей", из которого мы выдернули используемые в нём словосочетания, запилили
+                        приличное количество собственных, в несколько раз усложнили алгоритм, добавив новые схемы сборки, — и оформили в виде быстрого и удобного сервиса для получения
+                        тестового контента.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordions__item">
+                  <div class="accordions__item-visible">
+                    <div class="accordions__item-header">
+                      Я не нашел ответа на вопрос. Что делать?
+                    </div>
+                    <div class="accordions__item-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="10px" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 256 256" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><path d="M225.813 48.907 128 146.72 30.187 48.907 0 79.093l128 128 128-128z" fill="" data-original=""></path></g></svg>
+                    </div>
+                  </div>
+                  <div class="accordions__item-hidden">
+                    <div class="accordions-content">
+                      <p>
+                        Генерация рыбатекста происходит довольно просто: есть несколько фиксированных наборов фраз и словочетаний, из которых в опредёленном порядке формируются предложения.
+                        Предложения складываются в абзацы — и вы наслаждетесь очередным бредошедевром.
+                      </p>
+                      <p>
+                        Сама идея работы генератора заимствована у псевдосоветского "универсального кода речей", из которого мы выдернули используемые в нём словосочетания, запилили
+                        приличное количество собственных, в несколько раз усложнили алгоритм, добавив новые схемы сборки, — и оформили в виде быстрого и удобного сервиса для получения
+                        тестового контента.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordions__item">
+                  <div class="accordions__item-visible">
+                    <div class="accordions__item-header">
+                      Я не нашел ответа на вопрос. Что делать?
+                    </div>
+                    <div class="accordions__item-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="10px" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 256 256" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><path d="M225.813 48.907 128 146.72 30.187 48.907 0 79.093l128 128 128-128z" fill="" data-original=""></path></g></svg>
+                    </div>
+                  </div>
+                  <div class="accordions__item-hidden">
+                    <div class="accordions-content">
+                      <p>
+                        Генерация рыбатекста происходит довольно просто: есть несколько фиксированных наборов фраз и словочетаний, из которых в опредёленном порядке формируются предложения.
+                        Предложения складываются в абзацы — и вы наслаждетесь очередным бредошедевром.
+                      </p>
+                      <p>
+                        Сама идея работы генератора заимствована у псевдосоветского "универсального кода речей", из которого мы выдернули используемые в нём словосочетания, запилили
+                        приличное количество собственных, в несколько раз усложнили алгоритм, добавив новые схемы сборки, — и оформили в виде быстрого и удобного сервиса для получения
+                        тестового контента.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordions__item">
+                  <div class="accordions__item-visible">
+                    <div class="accordions__item-header">
+                      Я не нашел ответа на вопрос. Что делать?
+                    </div>
+                    <div class="accordions__item-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="10px" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 256 256" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><path d="M225.813 48.907 128 146.72 30.187 48.907 0 79.093l128 128 128-128z" fill="" data-original=""></path></g></svg>
+                    </div>
+                  </div>
+                  <div class="accordions__item-hidden">
+                    <div class="accordions-content">
+                      <p>
+                        Генерация рыбатекста происходит довольно просто: есть несколько фиксированных наборов фраз и словочетаний, из которых в опредёленном порядке формируются предложения.
+                        Предложения складываются в абзацы — и вы наслаждетесь очередным бредошедевром.
+                      </p>
+                      <p>
+                        Сама идея работы генератора заимствована у псевдосоветского "универсального кода речей", из которого мы выдернули используемые в нём словосочетания, запилили
+                        приличное количество собственных, в несколько раз усложнили алгоритм, добавив новые схемы сборки, — и оформили в виде быстрого и удобного сервиса для получения
+                        тестового контента.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordions__item">
+                  <div class="accordions__item-visible">
+                    <div class="accordions__item-header">
+                      Я не нашел ответа на вопрос. Что делать?
+                    </div>
+                    <div class="accordions__item-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="10px" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 256 256" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><path d="M225.813 48.907 128 146.72 30.187 48.907 0 79.093l128 128 128-128z" fill="" data-original=""></path></g></svg>
+                    </div>
+                  </div>
+                  <div class="accordions__item-hidden">
+                    <div class="accordions-content">
+                      <p>
+                        Генерация рыбатекста происходит довольно просто: есть несколько фиксированных наборов фраз и словочетаний, из которых в опредёленном порядке формируются предложения.
+                        Предложения складываются в абзацы — и вы наслаждетесь очередным бредошедевром.
+                      </p>
+                      <p>
+                        Сама идея работы генератора заимствована у псевдосоветского "универсального кода речей", из которого мы выдернули используемые в нём словосочетания, запилили
+                        приличное количество собственных, в несколько раз усложнили алгоритм, добавив новые схемы сборки, — и оформили в виде быстрого и удобного сервиса для получения
+                        тестового контента.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    @include('partials/_stats.html')
+  </main>
+  @include('partials/footer.html')
+</body>
+<script src="js/main.js"></script>
+
+</html>
+

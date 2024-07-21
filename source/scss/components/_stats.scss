@@ -37,8 +37,23 @@
   }
 }
 
+@media (max-width: 1264px) {
+  .stats {
+    &-grid {
+      grid-gap: 1rem;
+    }
+  }
+}
+
 @include tablet {
   .stats {
+    &-icon {
+      max-width: 100% !important;
+      width: auto;
+      img {
+        height: 2.25rem;
+      }
+    }
     &-grid {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 12px;
