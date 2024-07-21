@@ -172,6 +172,16 @@
 
 @include tablet {
   .slider {
+    padding-bottom: 2rem;
+    &-pagination {
+      right: initial;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0 !important;
+      flex-direction: row;
+      height: fit-content;
+      top: initial;
+    }
     &-decor {
       max-width: 280px;
     }

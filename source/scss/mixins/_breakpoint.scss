@@ -54,6 +54,10 @@
     @content;
   }
 }
+@mixin ratio($ratio) {
+  width: $ratio;
+  height: $ratio;
+}
 
 @mixin mobile {
   @media (max-width: (576px)) {

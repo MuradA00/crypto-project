@@ -11,6 +11,17 @@
       font-family: var(--ff);
     }
   }
+  &-copy {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+    svg {
+      fill: #3c3e58;
+      width: 20px;
+      height: 20px;
+    }
+  }
   &-dividers {
     display: flex;
     align-items: center;
@@ -110,6 +121,10 @@
   }
   &-field {
     flex: 1;
+    position: relative;
+    input {
+      padding-right: 2.5rem;
+    }
   }
   &-share {
     min-height: 44px;

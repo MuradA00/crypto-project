@@ -160,7 +160,7 @@
 
 @include tablet {
   .tape {
-    padding: .5rem 0;
+    padding: 1.5rem .5rem .5rem 0;
     &-flex {
       grid-gap: 8px;
       grid-template-columns: 40px 1fr;

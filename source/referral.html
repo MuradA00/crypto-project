@@ -3,6 +3,7 @@
 @include('partials/head.html')
 
 <body>
+  @include('partials/header.html')
   @include('partials/_tape.html')
   <main>
     <div class="referral-header">
@@ -40,6 +41,11 @@
                         type="text"
                         disabled
                       >
+                      <button class="referral-copy">
+                        <svg>
+                          <use href='img/sprite/sprite.svg#copy-icon'></use>
+                        </svg>
+                      </button>
                     </div>
                     <button class="referral-share">
                       <img src="img/global/share-icon.svg">
