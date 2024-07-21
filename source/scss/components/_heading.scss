@@ -14,6 +14,17 @@
     min-height: 34px;
     color: #8185a6;
     @include dfc;
+    span {
+      position: relative;
+      &::before {
+        content: '<';
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        color: inherit;
+        margin-right: 6px;
+      }
+    }
     &__icon {
       max-width: 1rem;
       display: none;
