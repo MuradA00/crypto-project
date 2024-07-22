@@ -6,11 +6,9 @@ import './_vendor';
 const accs = document.querySelectorAll('.accordions__item');
 const mobNav = document.querySelector('.header-nav');
 const panelMenu = document.querySelector('.menu-burger');
+const closeWinModal = document.querySelector('#win-modal .modal-close')
 const winModal = document.querySelector('#win-modal')
 const winButton = document.querySelector('#win-button');
-const paymentModal = document.querySelector('#payment-modal');
-const paymentButton = document.querySelector('.profile-replenish');
-const closePaymentModalButton = document.querySelector('#payment-modal .modal-close')
 const roulettePanelButtons = document.querySelectorAll('.roulette-toggle');
 const soundToggler = document.querySelector('.heading-sound')
 const paymentMethods =  document.querySelectorAll('.modal-payments__item');
@@ -19,7 +17,7 @@ const upgradeTabsButtons = document.querySelectorAll('.upgrade-tabs__item');
 const topSelect = document.querySelector('.tops-select');
 
 const closeModalByOuterClick = (modal) => {
-  const modalContainer = modal.querySelector('.modal-inner');
+  const modalContainer = modal.querySelector('.modal-container');
 
   modalContainer.addEventListener('click', (e) => {
     if (e.target === modalContainer) {
@@ -39,18 +37,6 @@ const showModal = () => {
   document.documentElement.classList.add('locked');
 }
 
-if (paymentButton) {
-  paymentButton.addEventListener('click', () => {
-    paymentModal.classList.add('modal--active')
-    showModal();
-  })
-  closeModalByOuterClick(paymentModal);
-  closePaymentModalButton.addEventListener('click', () => {
-    paymentModal.classList.remove('modal--active');
-    hideModal();
-  })
-}
-
 if (soundToggler) {
   soundToggler.addEventListener('click', () => soundToggler.classList.toggle('heading-sound--disabled'))
 }
@@ -61,6 +47,10 @@ if (winButton) {
 
     closeModalByOuterClick(winModal);
     showModal();
+  })
+  closeWinModal.addEventListener('click', () => {
+    winModal.classList.remove('modal--active');
+    hideModal()
   })
 }
 

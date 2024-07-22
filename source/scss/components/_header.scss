@@ -2,6 +2,9 @@
   padding-top: 40px;
   &-logo {
     max-width: 194px;
+    &_mobile {
+      display: none;
+    }
   }
   &-notif {
     background-color: #2f324b;
@@ -178,7 +181,12 @@
     }
     &-actions {
       & > * {
-        width: 2rem;
+        width: 28px;
+        border-radius: 50% !important;
+        svg {
+          width: 12px;
+          height: 12px;
+        }
       }
     }
     &-user {
@@ -213,9 +221,24 @@
 @media (max-width: 1366px) {
   .header {
     padding-top: 1.25rem;
+    &-logo {
+      max-width: 28px !important;
+      &_desktop {
+        display: none;
+      }
+      &_mobile {
+        display: block;
+      }
+    }
     &-actions {
       &> * {
         border-radius: 8px;
+      }
+    }
+    &-notif {
+      &__state {
+        right: 4px;
+        top: 4px;
       }
     }
     &-logo {
@@ -229,6 +252,7 @@
       padding: 0 12px;
     }
     &-user {
+      grid-gap: 12px;
       position: relative;
       &:hover {
         .header-user__info {
@@ -237,37 +261,21 @@
           transform: translateY(0);
         }
       }
+      &__currency {
+        font-size: 10px;
+        width: auto;
+        background-color: transparent;
+      }
       &__icon {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 32px;
+        height: 32px;
         border-radius: 50%;
       }
       &__balance {
-        font-size: 12px;
+        font-size: 11px;
       }
-      &__info {
-        background-color: #23263c;
-        border-radius: 6px;
-        right: 0;
-        padding: 6px;
-        min-width: 92px;
-        z-index: 10;
-        top: calc(100% + 1rem);
-        position: absolute;
+      &__name {
         font-size: 12px;
-        opacity: 0;
-        pointer-events: none;
-        transition: all 300ms ease;
-        transform: translateY(.5rem);
-        &::after {
-          @include pseudo;
-          background-color: inherit;
-          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-          width: 10px;
-          height: 6px;
-          top: -5px;
-          right: 13px;
-        }
       }
     }
     &-link {

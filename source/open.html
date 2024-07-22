@@ -6,6 +6,7 @@
   @include('partials/header.html')
   @include('partials/_tape.html')
   <main>
+    @include('partials/_win-modal.html')
     <section class="open">
       <div class="open-header container">
         <div class="heading open-top">
@@ -490,7 +491,7 @@
               x1
             </button>
           </ul>
-          <button class="open-button button">
+          <button class="open-button button" id="win-button">
             <span>открыть кейс</span>
           </button>
           <button class="open-quick">
