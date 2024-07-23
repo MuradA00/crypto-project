@@ -3,6 +3,7 @@ import './_vendor';
 // import './_components';
 
 
+const header = document.querySelector('.header');
 const accs = document.querySelectorAll('.accordions__item');
 const mobNav = document.querySelector('.header-nav');
 const panelMenu = document.querySelector('.menu-burger');
@@ -16,6 +17,20 @@ const body = document.body;
 const upgradeTabsButtons = document.querySelectorAll('.upgrade-tabs__item');
 const topSelect = document.querySelector('.tops-select');
 
+let lastScrollTop = 0;
+
+window.addEventListener("scroll", function() {
+  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  console.log(currentScroll, lastScrollTop);
+
+  if (currentScroll > lastScrollTop) {
+    header.classList.add("header--sticky");
+  } else {
+    header.classList.remove("header--sticky");
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+}, false);
 const closeModalByOuterClick = (modal) => {
   const modalContainer = modal.querySelector('.modal-container');
 

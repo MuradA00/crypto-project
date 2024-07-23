@@ -6,6 +6,7 @@ html {
 }
 
 body {
+  padding-top: 134px;
   position: relative;
   overflow-x: inherit;
   width: 100%;
@@ -26,6 +27,9 @@ body {
   -webkit-text-size-adjust: 100%;
   @include small-tablet {
     padding-bottom: 58px;
+  }
+  @media (max-width: 1366px) {
+    padding-top: 5rem;
   }
 }
 
